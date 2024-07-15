@@ -6,3 +6,18 @@
 .navbar-style{
     background-color: #24d86f !important;
 }
+
+.green-highlight{
+    color: greenyellow;
+    font-size: 40px;
+}
+
+.red-highlight{
+    font-size: 30px;
+    color: red;
+}
+
+.blue-highlight{
+    color: blue;
+    font-size: 20px;
+}

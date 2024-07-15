@@ -43,6 +43,12 @@ class MainContent extends Component {
     ],
   };
 
+  customerNameStyle = (custName) => {
+    if (custName.startsWith("S")) return "green-highlight";
+    else if (custName.startsWith("J")) return "red-highlight";
+    else return "blue-highlight";
+  };
+
   render() {
     return (
       <div>
@@ -87,19 +93,38 @@ class MainContent extends Component {
   };
 
   getCustomerRow = () => {
-    return this.state.customers.map((cust) => {
+    return this.state.customers.map((cust, index) => {
       return (
         <tr key={cust.id}>
           <td>{cust.id}</td>
           <td>
             <img src={cust.photo} alt="Customer" />
+            <div>
+              <button
+                className="btn btn-sm btn-secondary"
+                onClick={() => {
+                  this.onChangePhotoClick(cust, index);
+                }}
+              >
+                Change Photo
+              </button>
+            </div>
           </td>
-          <td>{cust.name}</td>
+          <td className={this.customerNameStyle(cust.name)}>{cust.name}</td>
           <td>{this.getPhonetoRender(cust.phoneNumber)}</td>
           <td>{cust.address.city}</td>
         </tr>
       );
     });
+  };
+
+  // Execute when user presses Change Photo Button.
+  // Receives customer obj & index of the current customer
+
+  onChangePhotoClick = (cust, index) => {
+    let custArr = this.state.customers;
+    custArr[index].photo = "https://picsum.photos/id/104/60";
+    this.setState({ customers: custArr });
   };
 }
 
