@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class MainContent extends Component {
+export default class CustomersList extends Component {
   state = {
     pageTitle: "Customers",
     customersCount: 5,
@@ -127,5 +127,3 @@ class MainContent extends Component {
     this.setState({ customers: custArr });
   };
 }
-
-export default MainContent;
