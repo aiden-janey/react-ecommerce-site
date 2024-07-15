@@ -71,4 +71,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ### Tutorial Position
 
-[Learn React by Building an eCommerce Site - Tutorial](https://youtu.be/1DklrGoAxDE?feature=shared&t=7554)
+[Learn React by Building an eCommerce Site - Tutorial](https://youtu.be/1DklrGoAxDE?feature=shared&t=8323)
