@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 export default class Product extends Component {
   constructor(props) {
-    console.log("constructor - Product");
+    // console.log("constructor - Product");
     super(props);
 
     this.state = {
@@ -12,7 +12,7 @@ export default class Product extends Component {
 
   render() {
     // console.log(this.props);
-    console.log("render - Product");
+    // console.log("render - Product");
     return (
       <div className="col-lg-6">
         <div className="card m-1">
@@ -62,14 +62,14 @@ export default class Product extends Component {
   }
 
   componentDidMount() {
-    console.log("componentDidMount - Product");
+    // console.log("componentDidMount - Product");
   }
 
   componentDidUpdate() {
-    console.log("componentDidUpdate - Product");
+    // console.log("componentDidUpdate - Product");
   }
 
   componentWillUnmount() {
-    console.log("componentWillUnmount - Product");
+    // console.log("componentWillUnmount - Product");
   }
 }

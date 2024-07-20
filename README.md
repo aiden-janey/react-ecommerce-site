@@ -2,7 +2,7 @@
 
 This is a tutorial I followed from freeCodeCamp.org to learn the React library.
 
-### [Tutorial Position](https://youtu.be/1DklrGoAxDE?feature=shared&t=16578)
+### [Tutorial Position](https://youtu.be/1DklrGoAxDE?feature=shared&t=16587)
 
 ### Life Cycle Phases of Components
 

@@ -4,7 +4,7 @@ import Product from "./Product";
 export default class ShoppingCart extends Component {
   //executes when component is mounted
   constructor(props) {
-    console.log("constructor - ShoppingCart");
+    // console.log("constructor - ShoppingCart");
     //dont make HTTP req within constructor
     super(props);
     //init the state
@@ -16,42 +16,42 @@ export default class ShoppingCart extends Component {
           price: 1200,
           qty: 0,
         },
-        // {
-        //   id: 2,
-        //   prodName: "Sony Camera",
-        //   price: 2200,
-        //   qty: 0,
-        // },
-        // {
-        //   id: 3,
-        //   prodName: "Samsung TV",
-        //   price: 4500,
-        //   qty: 0,
-        // },
-        // {
-        //   id: 4,
-        //   prodName: "Xbox 360",
-        //   price: 200,
-        //   qty: 0,
-        // },
-        // {
-        //   id: 5,
-        //   prodName: "Acer Monitor",
-        //   price: 500,
-        //   qty: 0,
-        // },
-        // {
-        //   id: 6,
-        //   prodName: "LG Smartwatch",
-        //   price: 189,
-        //   qty: 0,
-        // },
+        {
+          id: 2,
+          prodName: "Sony Camera",
+          price: 2200,
+          qty: 0,
+        },
+        {
+          id: 3,
+          prodName: "Samsung TV",
+          price: 4500,
+          qty: 0,
+        },
+        {
+          id: 4,
+          prodName: "Xbox 360",
+          price: 200,
+          qty: 0,
+        },
+        {
+          id: 5,
+          prodName: "Acer Monitor",
+          price: 500,
+          qty: 0,
+        },
+        {
+          id: 6,
+          prodName: "LG Smartwatch",
+          price: 189,
+          qty: 0,
+        },
       ],
     };
   }
 
   render() {
-    console.log("render - ShoppingCart");
+    // console.log("render - ShoppingCart");
     return (
       <div className="container-fluid">
         <h4 className="pt-2">Shopping Cart</h4>
@@ -78,17 +78,17 @@ export default class ShoppingCart extends Component {
   //executes after constructor & render method (including child comp) of current comp
   componentDidMount() {
     //fetch data from datasource
-    console.log("componentDidMount - ShoppingCart");
+    // console.log("componentDidMount - ShoppingCart");
   }
 
   componentDidUpdate(prevProps, prevState) {
-    console.log(
-      "componentDidUpdate - ShoppingCart",
-      prevProps,
-      prevState,
-      this.props,
-      this.state
-    );
+    // console.log(
+    //   "componentDidUpdate - ShoppingCart",
+    //   prevProps,
+    //   prevState,
+    //   this.props,
+    //   this.state
+    // );
     // if (prevProps.x != this.props.x) {
     //   http req can be made here conditionally
     // }
@@ -96,12 +96,12 @@ export default class ShoppingCart extends Component {
 
   //executes when user navigates to another route
   componentWillUnmount() {
-    console.log("componentWillUnmount - ShoppingCart");
+    // console.log("componentWillUnmount - ShoppingCart");
   }
 
   componentDidCatch(error, info) {
-    console.log("componentDidCatch - ShoppingCart");
-    console.log(`${error}: ${info}`);
+    // console.log("componentDidCatch - ShoppingCart");
+    // console.log(`${error}: ${info}`);
     localStorage.lastError = `${error}\n${JSON.stringify(info)}`;
   }
 
