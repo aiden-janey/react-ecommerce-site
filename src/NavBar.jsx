@@ -1,13 +1,14 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 class NavBar extends Component {
   render() {
     return (
       <React.Fragment>
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark navbar-style">
-          <a className="navbar-brand" href="/#">
+          <Link className="navbar-brand" to="/#">
             eCommerce
-          </a>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -22,9 +23,24 @@ class NavBar extends Component {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto">
               <li className="nav-item">
-                <a className="nav-link" href="/#">
-                  Home
-                </a>
+                <Link className="nav-link" to="/">
+                  Login
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/dashboard">
+                  Dashboard
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/cart">
+                  Cart
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/customers">
+                  Customers
+                </Link>
               </li>
             </ul>
           </div>
@@ -33,7 +49,7 @@ class NavBar extends Component {
     );
 
     /*
-      - Inorder to return 2+ tags they must be wrapped in a container like div.
+      - Inorder to return 2+ tags they must be wrapped in Link container like div.
         - Inorder to hide nested divs in dev-tools, use React.Fragment.
       - Use className in place of class for HTML attributes.
       - Use /# to avoid warnings in in href attribtutes.

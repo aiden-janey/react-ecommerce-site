@@ -8,52 +8,13 @@ export default class ShoppingCart extends Component {
     //dont make HTTP req within constructor
     super(props);
     //init the state
-    this.state = {
-      products: [
-        {
-          id: 1,
-          prodName: "iPhone",
-          price: 1200,
-          qty: 0,
-        },
-        {
-          id: 2,
-          prodName: "Sony Camera",
-          price: 2200,
-          qty: 0,
-        },
-        {
-          id: 3,
-          prodName: "Samsung TV",
-          price: 4500,
-          qty: 0,
-        },
-        {
-          id: 4,
-          prodName: "Xbox 360",
-          price: 200,
-          qty: 0,
-        },
-        {
-          id: 5,
-          prodName: "Acer Monitor",
-          price: 500,
-          qty: 0,
-        },
-        {
-          id: 6,
-          prodName: "LG Smartwatch",
-          price: 189,
-          qty: 0,
-        },
-      ],
-    };
+    this.state = { products: [] };
   }
 
   render() {
     // console.log("render - ShoppingCart");
     return (
-      <div className="container-fluid">
+      <div>
         <h4 className="pt-2">Shopping Cart</h4>
 
         <div className="row">
@@ -76,9 +37,24 @@ export default class ShoppingCart extends Component {
   }
 
   //executes after constructor & render method (including child comp) of current comp
-  componentDidMount() {
+  async componentDidMount() {
     //fetch data from datasource
     // console.log("componentDidMount - ShoppingCart");
+
+    let response = await fetch("http://localhost:5000/products", {
+      method: "GET",
+    });
+    let prods = await response.json();
+    this.setState({ products: prods });
+    console.log(prods);
+    // let promise = fetch("http://localhost:5000/products", { method: "GET" });
+    // promise.then((res) => {
+    //   let promise2 = res.json();
+    //   promise2.then((prods) => {
+    //     console.log(prods);
+    //     this.setState({ products: prods });
+    //   });
+    // });
   }
 
   componentDidUpdate(prevProps, prevState) {

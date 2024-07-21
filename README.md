@@ -1,8 +1,8 @@
 # Learn React by Building an eCommerce Site - Tutorial
 
-This is a tutorial I followed from freeCodeCamp.org to learn the React library.
+This is a tutorial I followed from freeCodeCamp.org to learn the React, JSON Server, and React-Router libraries by making a simple eCommerce Site.
 
-### [Tutorial Position](https://youtu.be/1DklrGoAxDE?feature=shared&t=16587)
+### [Tutorial Link](https://youtu.be/1DklrGoAxDE?feature=shared)
 
 ### Life Cycle Phases of Components
 
